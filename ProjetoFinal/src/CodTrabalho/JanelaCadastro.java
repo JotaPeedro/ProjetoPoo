@@ -434,6 +434,7 @@ public class JanelaCadastro extends javax.swing.JFrame {
         this.campoNumConta.setText("");
         this.campoResidencial.setText("");
         this.campoSenha.setText("");
+        
     }
     
     private class JanelaListener implements ActionListener{

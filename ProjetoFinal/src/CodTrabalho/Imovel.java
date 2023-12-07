@@ -6,22 +6,30 @@ public class Imovel {
     private int numero;
     private int CEP;
     private String complemento;
-    private String plano;
-
+    private int plano;
+    private String planoString;
     public Imovel() {
-        this.plano = "";
+        
         this.rua = "";
         this.numero = 0;
         this.CEP = 0;
         this.complemento = "";
+        
     }
 
-    public Imovel(String plano, String rua, int numero, int CEP, String complemento) {
-        this.plano = plano;
+    
+    
+    
+    public Imovel(int plano,String PlanoString,String rua, int numero, int CEP, String complemento) {
+        
+        this.plano=plano;
+        this.planoString=planoString;
         this.rua = rua;
         this.numero = numero;
         this.CEP = CEP;
         this.complemento = complemento;
+        
+        
     }
 
     public String getRua() {
@@ -38,6 +46,22 @@ public class Imovel {
 
     public String getComplemento() {
         return complemento;
+    }
+
+    public int getPlano() {
+        return plano;
+    }
+
+    public void setPlano(int plano) {
+        this.plano = plano;
+    }
+
+    public String getPlanoString() {
+        return planoString;
+    }
+
+    public void setPlanoString(String planoString) {
+        this.planoString = planoString;
     }
 
 }

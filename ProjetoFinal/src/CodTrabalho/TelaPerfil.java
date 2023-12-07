@@ -68,27 +68,27 @@ public class TelaPerfil extends javax.swing.JPanel {
         tabelaImoveis.setFont(new java.awt.Font("Noto Sans Mono", 0, 12)); // NOI18N
         tabelaImoveis.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "Plano", "Valor", "Rua", "Nº", "Complemento", "CEP"
+                "Plano", "Rua", "Nº", "Complemento", "CEP"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false
+                false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -226,6 +226,7 @@ public class TelaPerfil extends javax.swing.JPanel {
     }//GEN-LAST:event_btnAtualizaActionPerformed
     
     private void mostrarInfos(){
+        
         Cliente cliente = Cliente.iniciar();
         this.lblNome.setText(cliente.getNome());
         this.lblEmail.setText(cliente.getEmail());
@@ -234,11 +235,32 @@ public class TelaPerfil extends javax.swing.JPanel {
         this.lblNumConta.setText(Integer.toString(cliente.getContaBancaria().getNumConta()));
         this.lblCodBanco.setText(Integer.toString(cliente.getContaBancaria().getCodBanco()));
         int linha = 0;
+        
+        
+        
+        
+        
         for (Imovel i : cliente.getImoveis()){
-            this.tabelaImoveis.setValueAt(i.getRua(), linha, 0);
-            this.tabelaImoveis.setValueAt(i.getNumero(), linha, 1);
-            this.tabelaImoveis.setValueAt(i.getComplemento(), linha, 2);
-            this.tabelaImoveis.setValueAt(i.getCEP(), linha, 3);
+            String planoString=" ";
+            int plano=i.getPlano();
+            if(plano==1){
+               planoString="300MB";
+           
+            
+        }else if(plano==2){
+             planoString="500MB";
+           
+            
+        }else if(plano==3){
+            planoString="800MB";
+           
+        }
+            this.tabelaImoveis.setValueAt(planoString, linha, 0);
+            
+            this.tabelaImoveis.setValueAt(i.getRua(), linha, 1);
+            this.tabelaImoveis.setValueAt(i.getNumero(), linha, 2);
+            this.tabelaImoveis.setValueAt(i.getComplemento(), linha, 3);
+            this.tabelaImoveis.setValueAt(i.getCEP(), linha, 4);
             linha++;
         }
     }
