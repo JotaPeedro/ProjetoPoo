@@ -37,7 +37,7 @@ public class JanelaPrincipal extends javax.swing.JFrame{
         btnCadastrar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Sistema Seneamento Água");
+        setTitle("Central do Assinante");
         setSize(new java.awt.Dimension(700, 500));
 
         painelPrincipal.setLayout(new java.awt.CardLayout());
@@ -129,6 +129,8 @@ public class JanelaPrincipal extends javax.swing.JFrame{
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(painelPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
+
+        getAccessibleContext().setAccessibleName("Central do Assinante");
 
         pack();
         setLocationRelativeTo(null);

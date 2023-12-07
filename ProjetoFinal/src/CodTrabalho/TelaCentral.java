@@ -1,6 +1,7 @@
 package CodTrabalho;
 
 import java.awt.CardLayout;
+import javax.swing.JOptionPane;
      
 public class TelaCentral extends javax.swing.JPanel {
     
@@ -29,6 +30,11 @@ public class TelaCentral extends javax.swing.JPanel {
 
         jButton1.setFont(new java.awt.Font("Noto Sans Mono", 0, 15)); // NOI18N
         jButton1.setText("Segunda via de conta");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         btnImovel.setFont(new java.awt.Font("Noto Sans Mono", 0, 15)); // NOI18N
         btnImovel.setText("Cadastrar Imóvel");
@@ -47,7 +53,7 @@ public class TelaCentral extends javax.swing.JPanel {
         });
 
         jButton4.setFont(new java.awt.Font("Noto Sans Mono", 0, 15)); // NOI18N
-        jButton4.setText("Solicitar Reativação");
+        jButton4.setText("Solicitar Plano Provisório");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -83,7 +89,7 @@ public class TelaCentral extends javax.swing.JPanel {
                     .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnImovel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 117, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnVazamento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -139,8 +145,12 @@ public class TelaCentral extends javax.swing.JPanel {
     }//GEN-LAST:event_btnSairActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null, "Sua conexão será liberada por 48 horas");
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        JOptionPane.showMessageDialog(null, "Faturas enviadas Para o e-mail cadastrado");
+    }//GEN-LAST:event_jButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
