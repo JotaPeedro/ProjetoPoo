@@ -37,7 +37,7 @@ public class TelaCentral extends javax.swing.JPanel {
         });
 
         btnImovel.setFont(new java.awt.Font("Noto Sans Mono", 0, 15)); // NOI18N
-        btnImovel.setText("Cadastrar Imóvel");
+        btnImovel.setText("Cadastrar Plano");
         btnImovel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnImovelActionPerformed(evt);

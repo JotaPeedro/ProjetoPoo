@@ -1,6 +1,7 @@
 package CodTrabalho;
 
 import java.awt.CardLayout;
+import javax.swing.JOptionPane;
 
 public class TelaCentralF extends javax.swing.JPanel {
     
@@ -18,6 +19,7 @@ public class TelaCentralF extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         btnSolicitacoes = new javax.swing.JButton();
         btnSair = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         jLabel1.setFont(new java.awt.Font("Noto Sans Mono", 0, 36)); // NOI18N
         jLabel1.setText("Serviços");
@@ -38,21 +40,31 @@ public class TelaCentralF extends javax.swing.JPanel {
             }
         });
 
+        jButton1.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
+        jButton1.setText("Encaminhar Técnico");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(232, 232, 232)
-                        .addComponent(btnSolicitacoes))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(259, 259, 259)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(305, 305, 305)
-                        .addComponent(btnSair)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(259, 259, 259)
+                            .addComponent(jLabel1))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(305, 305, 305)
+                            .addComponent(btnSair))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(232, 232, 232)
+                            .addComponent(btnSolicitacoes))))
                 .addContainerGap(236, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -62,7 +74,9 @@ public class TelaCentralF extends javax.swing.JPanel {
                 .addComponent(jLabel1)
                 .addGap(92, 92, 92)
                 .addComponent(btnSolicitacoes, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 200, Short.MAX_VALUE)
+                .addGap(35, 35, 35)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 104, Short.MAX_VALUE)
                 .addComponent(btnSair)
                 .addGap(31, 31, 31))
         );
@@ -76,10 +90,15 @@ public class TelaCentralF extends javax.swing.JPanel {
         this.cardLayout.first(this.getParent());
     }//GEN-LAST:event_btnSairActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+       JOptionPane.showMessageDialog(null, "Uma solicitação foi enviada para o técnico mais próximo!");
+    }//GEN-LAST:event_jButton1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSair;
     private javax.swing.JButton btnSolicitacoes;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
