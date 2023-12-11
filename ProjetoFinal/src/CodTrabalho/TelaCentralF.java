@@ -21,9 +21,13 @@ public class TelaCentralF extends javax.swing.JPanel {
         btnSair = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
 
-        jLabel1.setFont(new java.awt.Font("Noto Sans Mono", 0, 36)); // NOI18N
-        jLabel1.setText("Serviços");
+        setBackground(new java.awt.Color(51, 51, 51));
 
+        jLabel1.setBackground(new java.awt.Color(0, 204, 204));
+        jLabel1.setFont(new java.awt.Font("Noto Sans Mono", 0, 36)); // NOI18N
+        jLabel1.setText("Central do Funcionario");
+
+        btnSolicitacoes.setBackground(new java.awt.Color(0, 204, 204));
         btnSolicitacoes.setFont(new java.awt.Font("Noto Sans Mono", 0, 15)); // NOI18N
         btnSolicitacoes.setText("Verificar Solicitações");
         btnSolicitacoes.addActionListener(new java.awt.event.ActionListener() {
@@ -32,6 +36,7 @@ public class TelaCentralF extends javax.swing.JPanel {
             }
         });
 
+        btnSair.setBackground(new java.awt.Color(0, 204, 204));
         btnSair.setFont(new java.awt.Font("Noto Sans Mono", 0, 15)); // NOI18N
         btnSair.setText("Sair");
         btnSair.addActionListener(new java.awt.event.ActionListener() {
@@ -40,6 +45,7 @@ public class TelaCentralF extends javax.swing.JPanel {
             }
         });
 
+        jButton1.setBackground(new java.awt.Color(0, 204, 204));
         jButton1.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
         jButton1.setText("Encaminhar Técnico");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -55,17 +61,17 @@ public class TelaCentralF extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(259, 259, 259)
+                        .addGap(150, 150, 150)
                         .addComponent(jLabel1))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(232, 232, 232)
+                        .addGap(230, 230, 230)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnSolicitacoes))))
-                .addGap(236, 236, 236))
+                .addGap(120, 120, 120))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addComponent(btnSair)
-                .addGap(290, 290, 290))
+                .addGap(300, 300, 300))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

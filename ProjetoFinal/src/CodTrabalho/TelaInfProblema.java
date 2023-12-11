@@ -26,18 +26,26 @@ public class TelaInfProblema extends javax.swing.JPanel {
         btnRealizar = new javax.swing.JButton();
         BotaoVoltar = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(51, 51, 51));
+
+        jLabel1.setBackground(new java.awt.Color(0, 204, 204));
         jLabel1.setFont(new java.awt.Font("Noto Sans Mono", 0, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 204, 204));
         jLabel1.setText("Informar Problemas");
 
+        jLabel5.setBackground(new java.awt.Color(0, 204, 204));
         jLabel5.setFont(new java.awt.Font("Noto Sans Mono", 0, 15)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 204, 204));
         jLabel5.setText("Descrição do Problema");
 
+        campoTexto.setBackground(new java.awt.Color(102, 102, 102));
         campoTexto.setColumns(20);
         campoTexto.setFont(new java.awt.Font("Noto Sans Mono", 0, 14)); // NOI18N
         campoTexto.setLineWrap(true);
         campoTexto.setRows(5);
         jScrollPane1.setViewportView(campoTexto);
 
+        btnRealizar.setBackground(new java.awt.Color(0, 204, 204));
         btnRealizar.setFont(new java.awt.Font("Noto Sans Mono", 0, 15)); // NOI18N
         btnRealizar.setText("Realizar Solicitação");
         btnRealizar.addActionListener(new java.awt.event.ActionListener() {
@@ -46,7 +54,8 @@ public class TelaInfProblema extends javax.swing.JPanel {
             }
         });
 
-        BotaoVoltar.setFont(new java.awt.Font("Noto Mono", 1, 14)); // NOI18N
+        BotaoVoltar.setBackground(new java.awt.Color(0, 204, 204));
+        BotaoVoltar.setFont(new java.awt.Font("Noto Sans", 1, 14)); // NOI18N
         BotaoVoltar.setText("Voltar");
         BotaoVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -75,9 +84,9 @@ public class TelaInfProblema extends javax.swing.JPanel {
                         .addGap(143, 143, 143))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(BotaoVoltar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnRealizar)
-                        .addGap(24, 24, 24))))
+                        .addGap(18, 18, 18))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -88,7 +97,7 @@ public class TelaInfProblema extends javax.swing.JPanel {
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnRealizar)
                     .addComponent(BotaoVoltar))

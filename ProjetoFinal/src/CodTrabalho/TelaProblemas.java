@@ -32,14 +32,19 @@ public class TelaProblemas extends javax.swing.JPanel {
         btnVoltar = new javax.swing.JButton();
         btnAtualiza = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(51, 51, 51));
+
         jLabel1.setFont(new java.awt.Font("Noto Sans Mono", 0, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 204, 204));
         jLabel1.setText("Solicitações");
 
         jLabel2.setFont(new java.awt.Font("Noto Sans Mono", 0, 15)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 204, 204));
         jLabel2.setText("Cód. Solicitação");
 
         campoIdSolicitacao.setFont(new java.awt.Font("Noto Sans Mono", 0, 14)); // NOI18N
 
+        btnVisualizar.setBackground(new java.awt.Color(0, 204, 204));
         btnVisualizar.setFont(new java.awt.Font("Noto Sans Mono", 0, 15)); // NOI18N
         btnVisualizar.setText("Visualizar");
         btnVisualizar.addActionListener(new java.awt.event.ActionListener() {
@@ -48,6 +53,8 @@ public class TelaProblemas extends javax.swing.JPanel {
             }
         });
 
+        tabelaSolicitacoes.setAutoCreateRowSorter(true);
+        tabelaSolicitacoes.setBackground(new java.awt.Color(102, 102, 102));
         tabelaSolicitacoes.setFont(new java.awt.Font("Noto Sans Mono", 0, 12)); // NOI18N
         tabelaSolicitacoes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -86,6 +93,7 @@ public class TelaProblemas extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tabelaSolicitacoes);
 
+        btnVoltar.setBackground(new java.awt.Color(0, 204, 204));
         btnVoltar.setFont(new java.awt.Font("Noto Sans Mono", 0, 15)); // NOI18N
         btnVoltar.setText("Voltar");
         btnVoltar.addActionListener(new java.awt.event.ActionListener() {
@@ -94,6 +102,7 @@ public class TelaProblemas extends javax.swing.JPanel {
             }
         });
 
+        btnAtualiza.setBackground(new java.awt.Color(0, 204, 204));
         btnAtualiza.setFont(new java.awt.Font("Noto Sans Mono", 0, 12)); // NOI18N
         btnAtualiza.setText("Atualizar");
         btnAtualiza.addActionListener(new java.awt.event.ActionListener() {

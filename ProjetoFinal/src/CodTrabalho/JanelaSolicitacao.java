@@ -55,16 +55,26 @@ public class JanelaSolicitacao extends javax.swing.JFrame {
         setTitle("Solicitação");
         setResizable(false);
 
+        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
+
+        jLabel1.setBackground(new java.awt.Color(0, 204, 204));
         jLabel1.setFont(new java.awt.Font("Noto Sans Mono", 0, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 204, 204));
         jLabel1.setText("Solicitação");
 
+        jLabel2.setBackground(new java.awt.Color(0, 204, 204));
         jLabel2.setFont(new java.awt.Font("Noto Sans Mono", 1, 15)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 204, 204));
         jLabel2.setText("Cód. Solicitação:");
 
+        jLabel3.setBackground(new java.awt.Color(0, 204, 204));
         jLabel3.setFont(new java.awt.Font("Noto Sans Mono", 1, 15)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 204, 204));
         jLabel3.setText("ID User:");
 
+        jLabel4.setBackground(new java.awt.Color(0, 204, 204));
         jLabel4.setFont(new java.awt.Font("Noto Sans Mono", 1, 15)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 204, 204));
         jLabel4.setText("Descrição: ");
 
         txtDescricao.setEditable(false);
@@ -80,6 +90,7 @@ public class JanelaSolicitacao extends javax.swing.JFrame {
         lblID.setFont(new java.awt.Font("Noto Sans Mono", 0, 14)); // NOI18N
         lblID.setText("jLabel6");
 
+        btnVoltar.setBackground(new java.awt.Color(0, 204, 204));
         btnVoltar.setFont(new java.awt.Font("Noto Sans Mono", 0, 15)); // NOI18N
         btnVoltar.setText("Voltar");
         btnVoltar.addActionListener(new java.awt.event.ActionListener() {

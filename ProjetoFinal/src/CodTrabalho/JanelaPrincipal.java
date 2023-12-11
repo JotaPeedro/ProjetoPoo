@@ -42,19 +42,28 @@ public class JanelaPrincipal extends javax.swing.JFrame{
 
         painelPrincipal.setLayout(new java.awt.CardLayout());
 
+        painelLogin.setBackground(new java.awt.Color(51, 51, 51));
+
+        jLabel1.setBackground(new java.awt.Color(0, 204, 204));
         jLabel1.setFont(new java.awt.Font("Noto Sans Mono", 0, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 204, 204));
         jLabel1.setText("Bem-Vindo!!!");
 
+        jLabel2.setBackground(new java.awt.Color(0, 204, 255));
         jLabel2.setFont(new java.awt.Font("Noto Sans Mono", 0, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 204, 204));
         jLabel2.setText("Login");
 
+        jLabel3.setBackground(new java.awt.Color(0, 204, 255));
         jLabel3.setFont(new java.awt.Font("Noto Sans Mono", 0, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 204, 204));
         jLabel3.setText("Senha");
 
         campoID.setFont(new java.awt.Font("Noto Sans Mono", 0, 14)); // NOI18N
 
         campoSenha.setFont(new java.awt.Font("Noto Sans Mono", 0, 14)); // NOI18N
 
+        btnEntrar.setBackground(new java.awt.Color(0, 204, 204));
         btnEntrar.setFont(new java.awt.Font("Noto Sans Mono", 0, 18)); // NOI18N
         btnEntrar.setText("Entrar");
         btnEntrar.addActionListener(new java.awt.event.ActionListener() {
@@ -63,6 +72,7 @@ public class JanelaPrincipal extends javax.swing.JFrame{
             }
         });
 
+        btnCadastrar.setBackground(new java.awt.Color(0, 204, 204));
         btnCadastrar.setFont(new java.awt.Font("Noto Sans Mono", 0, 18)); // NOI18N
         btnCadastrar.setText("Cadastrar");
         btnCadastrar.addActionListener(new java.awt.event.ActionListener() {
@@ -81,14 +91,14 @@ public class JanelaPrincipal extends javax.swing.JFrame{
                 .addGap(166, 166, 166))
             .addGroup(painelLoginLayout.createSequentialGroup()
                 .addGap(161, 161, 161)
-                .addGroup(painelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(painelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(painelLoginLayout.createSequentialGroup()
                         .addComponent(jLabel3)
-                        .addGap(18, 18, 18)
-                        .addComponent(campoSenha))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(campoSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(painelLoginLayout.createSequentialGroup()
                         .addComponent(jLabel2)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(campoID, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelLoginLayout.createSequentialGroup()
                         .addComponent(btnCadastrar)
@@ -129,8 +139,6 @@ public class JanelaPrincipal extends javax.swing.JFrame{
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(painelPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-
-        getAccessibleContext().setAccessibleName("Central do Assinante");
 
         pack();
         setLocationRelativeTo(null);

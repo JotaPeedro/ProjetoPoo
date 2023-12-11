@@ -41,30 +41,41 @@ public class TelaPerfil extends javax.swing.JPanel {
         lblCodBanco = new javax.swing.JLabel();
         btnAtualiza = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(51, 51, 51));
+
         jLabel1.setFont(new java.awt.Font("Noto Sans Mono", 0, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 204, 204));
         jLabel1.setText("Perfil Cliente");
 
         jLabel2.setFont(new java.awt.Font("Noto Sans Mono", 1, 15)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 204, 204));
         jLabel2.setText("Nome:");
 
         jLabel3.setFont(new java.awt.Font("Noto Sans Mono", 1, 15)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 204, 204));
         jLabel3.setText("E-mail:");
 
         jLabel4.setFont(new java.awt.Font("Noto Sans Mono", 1, 15)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 204, 204));
         jLabel4.setText("Tel. Celular:");
 
         jLabel5.setFont(new java.awt.Font("Noto Sans Mono", 1, 15)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 204, 204));
         jLabel5.setText("Tel. Residencial:");
 
         jLabel6.setFont(new java.awt.Font("Noto Sans Mono", 1, 15)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 204, 204));
         jLabel6.setText("Conta Bancária");
 
         jLabel7.setFont(new java.awt.Font("Noto Sans Mono", 0, 15)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(0, 204, 204));
         jLabel7.setText("Nº Conta: ");
 
         jLabel8.setFont(new java.awt.Font("Noto Sans Mono", 0, 15)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(0, 204, 204));
         jLabel8.setText("Cód. Banco: ");
 
+        tabelaImoveis.setBackground(new java.awt.Color(102, 102, 102));
         tabelaImoveis.setFont(new java.awt.Font("Noto Sans Mono", 0, 12)); // NOI18N
         tabelaImoveis.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -97,6 +108,7 @@ public class TelaPerfil extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tabelaImoveis);
 
+        btnVoltar.setBackground(new java.awt.Color(0, 204, 204));
         btnVoltar.setText("Voltar");
         btnVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -122,6 +134,7 @@ public class TelaPerfil extends javax.swing.JPanel {
         lblCodBanco.setFont(new java.awt.Font("Noto Sans Mono", 0, 14)); // NOI18N
         lblCodBanco.setText("jLabel14");
 
+        btnAtualiza.setBackground(new java.awt.Color(0, 204, 204));
         btnAtualiza.setFont(new java.awt.Font("Noto Sans Mono", 0, 12)); // NOI18N
         btnAtualiza.setText("Atualizar");
         btnAtualiza.addActionListener(new java.awt.event.ActionListener() {

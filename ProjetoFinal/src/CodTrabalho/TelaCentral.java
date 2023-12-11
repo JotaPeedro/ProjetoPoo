@@ -21,13 +21,17 @@ public class TelaCentral extends javax.swing.JPanel {
         btnImovel = new javax.swing.JButton();
         btnVisualizarInfos = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        btnVazamento = new javax.swing.JButton();
+        btnProblema = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         btnSair = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(51, 51, 51));
+
         jLabel1.setFont(new java.awt.Font("Noto Sans Mono", 0, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 204, 204));
         jLabel1.setText("Central do Assinante");
 
+        jButton1.setBackground(new java.awt.Color(0, 204, 204));
         jButton1.setFont(new java.awt.Font("Noto Sans Mono", 0, 15)); // NOI18N
         jButton1.setText("Segunda via de conta");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -36,6 +40,7 @@ public class TelaCentral extends javax.swing.JPanel {
             }
         });
 
+        btnImovel.setBackground(new java.awt.Color(0, 204, 204));
         btnImovel.setFont(new java.awt.Font("Noto Sans Mono", 0, 15)); // NOI18N
         btnImovel.setText("Cadastrar Plano");
         btnImovel.addActionListener(new java.awt.event.ActionListener() {
@@ -44,6 +49,7 @@ public class TelaCentral extends javax.swing.JPanel {
             }
         });
 
+        btnVisualizarInfos.setBackground(new java.awt.Color(0, 204, 204));
         btnVisualizarInfos.setFont(new java.awt.Font("Noto Sans Mono", 0, 15)); // NOI18N
         btnVisualizarInfos.setText("Vizualizar Planos");
         btnVisualizarInfos.addActionListener(new java.awt.event.ActionListener() {
@@ -52,6 +58,7 @@ public class TelaCentral extends javax.swing.JPanel {
             }
         });
 
+        jButton4.setBackground(new java.awt.Color(0, 204, 204));
         jButton4.setFont(new java.awt.Font("Noto Sans Mono", 0, 15)); // NOI18N
         jButton4.setText("Solicitar Plano Provisório");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -60,17 +67,20 @@ public class TelaCentral extends javax.swing.JPanel {
             }
         });
 
-        btnVazamento.setFont(new java.awt.Font("Noto Sans Mono", 0, 15)); // NOI18N
-        btnVazamento.setText("Informar Problema");
-        btnVazamento.addActionListener(new java.awt.event.ActionListener() {
+        btnProblema.setBackground(new java.awt.Color(0, 204, 204));
+        btnProblema.setFont(new java.awt.Font("Noto Sans Mono", 0, 15)); // NOI18N
+        btnProblema.setText("Informar Problema");
+        btnProblema.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnVazamentoActionPerformed(evt);
+                btnProblemaActionPerformed(evt);
             }
         });
 
+        jButton6.setBackground(new java.awt.Color(0, 204, 204));
         jButton6.setFont(new java.awt.Font("Noto Sans Mono", 0, 15)); // NOI18N
         jButton6.setText("Solicitar Atendimento");
 
+        btnSair.setBackground(new java.awt.Color(0, 204, 204));
         btnSair.setFont(new java.awt.Font("Noto Mono", 0, 15)); // NOI18N
         btnSair.setText("Sair");
         btnSair.addActionListener(new java.awt.event.ActionListener() {
@@ -91,7 +101,7 @@ public class TelaCentral extends javax.swing.JPanel {
                     .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnVazamento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnProblema, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnVisualizarInfos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(77, 77, 77))
@@ -119,7 +129,7 @@ public class TelaCentral extends javax.swing.JPanel {
                     .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnVazamento, javax.swing.GroupLayout.DEFAULT_SIZE, 62, Short.MAX_VALUE)
+                    .addComponent(btnProblema, javax.swing.GroupLayout.DEFAULT_SIZE, 62, Short.MAX_VALUE)
                     .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(60, 60, 60)
                 .addComponent(btnSair)
@@ -135,9 +145,9 @@ public class TelaCentral extends javax.swing.JPanel {
         cardLayout.show(this.getParent(), "telaCadastroImovel");
     }//GEN-LAST:event_btnImovelActionPerformed
 
-    private void btnVazamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVazamentoActionPerformed
+    private void btnProblemaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProblemaActionPerformed
         cardLayout.show(this.getParent(), "telaVazamento");
-    }//GEN-LAST:event_btnVazamentoActionPerformed
+    }//GEN-LAST:event_btnProblemaActionPerformed
 
     private void btnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairActionPerformed
         Cliente.fechar();
@@ -155,8 +165,8 @@ public class TelaCentral extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnImovel;
+    private javax.swing.JButton btnProblema;
     private javax.swing.JButton btnSair;
-    private javax.swing.JButton btnVazamento;
     private javax.swing.JButton btnVisualizarInfos;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton4;

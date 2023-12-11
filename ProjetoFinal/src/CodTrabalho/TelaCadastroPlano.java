@@ -42,19 +42,32 @@ public class TelaCadastroPlano extends javax.swing.JPanel {
         campoPlano = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(51, 51, 51));
+        setToolTipText("");
+
+        jLabel1.setBackground(new java.awt.Color(0, 204, 204));
         jLabel1.setFont(new java.awt.Font("Noto Sans Mono", 0, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 204, 204));
         jLabel1.setText("Cadastrar Novo Plano");
 
+        jLabel2.setBackground(new java.awt.Color(0, 204, 204));
         jLabel2.setFont(new java.awt.Font("Noto Sans Mono", 0, 15)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 204, 204));
         jLabel2.setText("Rua");
 
+        jLabel3.setBackground(new java.awt.Color(0, 204, 204));
         jLabel3.setFont(new java.awt.Font("Noto Sans Mono", 0, 15)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 204, 204));
         jLabel3.setText("Número");
 
+        jLabel4.setBackground(new java.awt.Color(0, 204, 204));
         jLabel4.setFont(new java.awt.Font("Noto Sans Mono", 0, 15)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 204, 204));
         jLabel4.setText("CEP");
 
+        jLabel5.setBackground(new java.awt.Color(0, 204, 204));
         jLabel5.setFont(new java.awt.Font("Noto Sans Mono", 0, 15)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 204, 204));
         jLabel5.setText("Complemento");
 
         campoRua.setFont(new java.awt.Font("Noto Sans Mono", 0, 14)); // NOI18N
@@ -65,6 +78,7 @@ public class TelaCadastroPlano extends javax.swing.JPanel {
 
         campoComplemento.setFont(new java.awt.Font("Noto Sans Mono", 0, 14)); // NOI18N
 
+        btnCadastrar.setBackground(new java.awt.Color(0, 204, 204));
         btnCadastrar.setFont(new java.awt.Font("Noto Sans Mono", 0, 15)); // NOI18N
         btnCadastrar.setText("Cadastrar");
         btnCadastrar.addActionListener(new java.awt.event.ActionListener() {
@@ -73,6 +87,7 @@ public class TelaCadastroPlano extends javax.swing.JPanel {
             }
         });
 
+        tabelaImoveis.setBackground(new java.awt.Color(102, 102, 102));
         tabelaImoveis.setFont(new java.awt.Font("Noto Sans Mono", 0, 12)); // NOI18N
         tabelaImoveis.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -105,6 +120,7 @@ public class TelaCadastroPlano extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tabelaImoveis);
 
+        btnVoltar.setBackground(new java.awt.Color(0, 204, 204));
         btnVoltar.setText("Voltar");
         btnVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -112,13 +128,21 @@ public class TelaCadastroPlano extends javax.swing.JPanel {
             }
         });
 
+        jLabel9.setBackground(new java.awt.Color(0, 204, 204));
+        jLabel9.setForeground(new java.awt.Color(0, 204, 204));
         jLabel9.setText("3-800MB por R$119,99");
 
+        jLabel10.setBackground(new java.awt.Color(0, 204, 204));
         jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(0, 204, 204));
         jLabel10.setText("Planos Disponíveis:");
 
+        jLabel7.setBackground(new java.awt.Color(0, 204, 204));
+        jLabel7.setForeground(new java.awt.Color(0, 204, 204));
         jLabel7.setText("1-300MB por R$79,00");
 
+        jLabel8.setBackground(new java.awt.Color(0, 204, 204));
+        jLabel8.setForeground(new java.awt.Color(0, 204, 204));
         jLabel8.setText("2-500MB por R$99,90");
 
         campoPlano.setFont(new java.awt.Font("Noto Sans Mono", 0, 14)); // NOI18N
@@ -128,7 +152,9 @@ public class TelaCadastroPlano extends javax.swing.JPanel {
             }
         });
 
+        jLabel6.setBackground(new java.awt.Color(0, 204, 204));
         jLabel6.setFont(new java.awt.Font("Noto Sans", 0, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 204, 204));
         jLabel6.setText("Informe o Plano Desejado:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

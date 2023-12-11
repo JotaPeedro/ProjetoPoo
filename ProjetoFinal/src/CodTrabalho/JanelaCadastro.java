@@ -85,22 +85,30 @@ public class JanelaCadastro extends javax.swing.JFrame {
         setTitle("Cadastro");
         setResizable(false);
 
+        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
+
         jLabel2.setFont(new java.awt.Font("Noto Sans Mono", 0, 36)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 204, 204));
         jLabel2.setText("Cadastro");
 
         jLabel3.setFont(new java.awt.Font("Noto Mono", 0, 15)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 204, 204));
         jLabel3.setText("E-mail");
 
         jLabel4.setFont(new java.awt.Font("Noto Mono", 0, 15)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 204, 204));
         jLabel4.setText("Tel. Celular");
 
         jLabel5.setFont(new java.awt.Font("Noto Mono", 0, 15)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 204, 204));
         jLabel5.setText("Tel. Residencial");
 
         jLabel6.setFont(new java.awt.Font("Noto Mono", 0, 15)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 204, 204));
         jLabel6.setText("Login");
 
         jLabel7.setFont(new java.awt.Font("Noto Mono", 0, 15)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(0, 204, 204));
         jLabel7.setText("Senha");
 
         campoEmail.setFont(new java.awt.Font("Noto Sans Mono", 0, 14)); // NOI18N
@@ -123,10 +131,14 @@ public class JanelaCadastro extends javax.swing.JFrame {
         campoSenha.setMinimumSize(new java.awt.Dimension(50, 30));
         campoSenha.setPreferredSize(new java.awt.Dimension(50, 30));
 
+        pnlDebito.setBackground(new java.awt.Color(51, 51, 51));
+
         jLabel8.setFont(new java.awt.Font("Noto Mono", 0, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(0, 204, 204));
         jLabel8.setText("Nº Conta");
 
         jLabel9.setFont(new java.awt.Font("Noto Mono", 0, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(0, 204, 204));
         jLabel9.setText("Cód. Banco ");
 
         campoNumConta.setFont(new java.awt.Font("Noto Sans Mono", 0, 12)); // NOI18N
@@ -165,6 +177,7 @@ public class JanelaCadastro extends javax.swing.JFrame {
                 .addContainerGap(17, Short.MAX_VALUE))
         );
 
+        btnImovel.setBackground(new java.awt.Color(0, 204, 204));
         btnImovel.setFont(new java.awt.Font("Noto Sans Mono", 0, 15)); // NOI18N
         btnImovel.setText("Cadastrar Imóvel");
         btnImovel.addActionListener(new java.awt.event.ActionListener() {
@@ -173,6 +186,7 @@ public class JanelaCadastro extends javax.swing.JFrame {
             }
         });
 
+        btnConcluir.setBackground(new java.awt.Color(0, 204, 204));
         btnConcluir.setFont(new java.awt.Font("Noto Sans Mono", 0, 15)); // NOI18N
         btnConcluir.setText("Concluir");
         btnConcluir.addActionListener(new java.awt.event.ActionListener() {
@@ -182,17 +196,21 @@ public class JanelaCadastro extends javax.swing.JFrame {
         });
 
         jLabel10.setFont(new java.awt.Font("Noto Sans Mono", 0, 15)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(0, 204, 204));
         jLabel10.setText("Nome");
 
         campoNome.setFont(new java.awt.Font("Noto Sans Mono", 0, 14)); // NOI18N
 
         lblExiste.setFont(new java.awt.Font("Noto Sans Mono", 0, 10)); // NOI18N
+        lblExiste.setForeground(new java.awt.Color(0, 204, 204));
         lblExiste.setText("Já existe");
 
         opEmail.setFont(new java.awt.Font("Noto Sans Mono", 0, 12)); // NOI18N
+        opEmail.setForeground(new java.awt.Color(0, 204, 204));
         opEmail.setText("Receber fatura por e-mail");
 
         opDebito.setFont(new java.awt.Font("Noto Sans Mono", 0, 12)); // NOI18N
+        opDebito.setForeground(new java.awt.Color(0, 204, 204));
         opDebito.setText("Solicitar débito automatico");
         opDebito.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
