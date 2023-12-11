@@ -356,6 +356,7 @@ public class JanelaCadastroPlano extends javax.swing.JFrame {
         this.campoCEP.setText("");
         this.campoComplemento.setText("");
         this.campoNumero.setText("");
+        this.campoPlano.setText("");
     }
     private void mostrarImoveis(){
         for (Imovel i : this.cliente.getImoveis()){
