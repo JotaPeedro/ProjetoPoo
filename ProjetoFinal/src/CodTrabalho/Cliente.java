@@ -13,7 +13,7 @@ public class Cliente extends Usuario {
     private int telefoneCelular;
     private ContaBancaria contaBancaria = new ContaBancaria();
     private int CodigoCliente;
-    
+    ///////SINGLETON//////////
     public static Cliente iniciar(){
         if (cliente == null)
             cliente = new Cliente();
@@ -28,6 +28,8 @@ public class Cliente extends Usuario {
     public static Cliente getCliente(){
         return cliente;
     }
+    
+    //////SINGLETON//////////
     private Cliente(){
     }
     

@@ -6,7 +6,7 @@ public class Controller {
     private Model model;
     private Solicitacao solicitacao;
     private static Controller controller;
-    
+     ///////SINGLETON//////////
     public static Controller iniciar(){
         if (controller == null)
             controller = new Controller();
@@ -21,6 +21,7 @@ public class Controller {
         this.model.addUsuario(funcionario);
         
     }
+    ///////SINGLETON//////////
     public int validaNumeros(String numero){
         int num;
         try{

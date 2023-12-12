@@ -162,6 +162,8 @@ public class JanelaLogin extends javax.swing.JFrame{
         Cliente cliente = Cliente.iniciar();
   
         this.limparCampos();
+        
+        /////////POLIMORFISMO/////////////
       if (this.controller.validaLogin(login)) {
             int posiUser = this.controller.buscarUser(login);
             Usuario user = (Usuario) this.controller.getUsuario(posiUser);
@@ -179,8 +181,8 @@ public class JanelaLogin extends javax.swing.JFrame{
     } else {
         JOptionPane.showMessageDialog(this, "Usuário e/ou senha incorretos", "Login Incorreto", JOptionPane.ERROR_MESSAGE);
     }
-      
-      
+       /////////POLIMORFISMO/////////////
+       
     }//GEN-LAST:event_btnEntrarActionPerformed
      public void limparCampos(){
         this.campoID.setText("");
