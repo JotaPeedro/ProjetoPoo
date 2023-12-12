@@ -174,7 +174,7 @@ public class JanelaLogin extends javax.swing.JFrame{
                 Cliente client = (Cliente) user;
                 Cliente.setCliente(client);
                 this.painelPrincipal.add(TelaPlanos.iniciar(paginas), "telaInfos");
-                this.painelPrincipal.add(new TelaCadastroPlano(paginas), "telaCadastroImovel");
+                this.painelPrincipal.add(new TelaCadastroPlano(paginas), "telaCadastroPlano");
                 this.painelPrincipal.add(new TelaInfProblema(paginas), "telaVazamento");
                 paginas.show(this.painelPrincipal, "telaServicos");
             }

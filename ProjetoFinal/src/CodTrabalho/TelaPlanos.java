@@ -31,7 +31,7 @@ public class TelaPlanos extends javax.swing.JPanel {
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tabelaImoveis = new javax.swing.JTable();
+        tabelaPlanos = new javax.swing.JTable();
         btnVoltar = new javax.swing.JButton();
         lblNome = new javax.swing.JLabel();
         lblEmail = new javax.swing.JLabel();
@@ -75,9 +75,9 @@ public class TelaPlanos extends javax.swing.JPanel {
         jLabel8.setForeground(new java.awt.Color(0, 204, 204));
         jLabel8.setText("Cód. Banco: ");
 
-        tabelaImoveis.setBackground(new java.awt.Color(204, 204, 255));
-        tabelaImoveis.setFont(new java.awt.Font("Noto Sans Mono", 0, 12)); // NOI18N
-        tabelaImoveis.setModel(new javax.swing.table.DefaultTableModel(
+        tabelaPlanos.setBackground(new java.awt.Color(204, 204, 255));
+        tabelaPlanos.setFont(new java.awt.Font("Noto Sans Mono", 0, 12)); // NOI18N
+        tabelaPlanos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -106,7 +106,7 @@ public class TelaPlanos extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(tabelaImoveis);
+        jScrollPane1.setViewportView(tabelaPlanos);
 
         btnVoltar.setBackground(new java.awt.Color(0, 204, 204));
         btnVoltar.setText("Voltar");
@@ -259,7 +259,7 @@ public class TelaPlanos extends javax.swing.JPanel {
         
         
         
-        for (Imovel i : cliente.getImoveis()){
+        for (Plano i : cliente.getPlanos()){
             String planoString=" ";
             int plano=i.getPlano();
             if(plano==1){
@@ -274,12 +274,12 @@ public class TelaPlanos extends javax.swing.JPanel {
             planoString="800MB";
            
         }
-            this.tabelaImoveis.setValueAt(planoString, linha, 0);
+            this.tabelaPlanos.setValueAt(planoString, linha, 0);
             
-            this.tabelaImoveis.setValueAt(i.getRua(), linha, 1);
-            this.tabelaImoveis.setValueAt(i.getNumero(), linha, 2);
-            this.tabelaImoveis.setValueAt(i.getComplemento(), linha, 3);
-            this.tabelaImoveis.setValueAt(i.getCEP(), linha, 4);
+            this.tabelaPlanos.setValueAt(i.getRua(), linha, 1);
+            this.tabelaPlanos.setValueAt(i.getNumero(), linha, 2);
+            this.tabelaPlanos.setValueAt(i.getComplemento(), linha, 3);
+            this.tabelaPlanos.setValueAt(i.getCEP(), linha, 4);
             linha++;
         }
     }
@@ -302,6 +302,6 @@ public class TelaPlanos extends javax.swing.JPanel {
     private javax.swing.JLabel lblNumConta;
     private javax.swing.JLabel lblTelC;
     private javax.swing.JLabel lblTelR;
-    private javax.swing.JTable tabelaImoveis;
+    private javax.swing.JTable tabelaPlanos;
     // End of variables declaration//GEN-END:variables
 }

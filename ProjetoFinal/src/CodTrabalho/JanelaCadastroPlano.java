@@ -25,7 +25,7 @@ public class JanelaCadastroPlano extends javax.swing.JFrame {
         this.setVisible(true);
         this.controller = Controller.iniciar();
         this.cliente = Cliente.iniciar();
-        this.mostrarImoveis();
+        this.mostrarPlanos();
     }
 
     @SuppressWarnings("unchecked")
@@ -43,7 +43,7 @@ public class JanelaCadastroPlano extends javax.swing.JFrame {
         campoCEP = new javax.swing.JTextField();
         campoComplemento = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tabelaImoveis = new javax.swing.JTable();
+        tabelaPlano = new javax.swing.JTable();
         btnConcluir = new javax.swing.JButton();
         btnCadastrar1 = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
@@ -54,7 +54,7 @@ public class JanelaCadastroPlano extends javax.swing.JFrame {
         campoPlano = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Cadastro Ímovel");
+        setTitle("Cadastro Plano");
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
@@ -92,9 +92,9 @@ public class JanelaCadastroPlano extends javax.swing.JFrame {
 
         campoComplemento.setFont(new java.awt.Font("Noto Sans Mono", 0, 14)); // NOI18N
 
-        tabelaImoveis.setBackground(new java.awt.Color(204, 204, 255));
-        tabelaImoveis.setFont(new java.awt.Font("Noto Sans Mono", 0, 12)); // NOI18N
-        tabelaImoveis.setModel(new javax.swing.table.DefaultTableModel(
+        tabelaPlano.setBackground(new java.awt.Color(204, 204, 255));
+        tabelaPlano.setFont(new java.awt.Font("Noto Sans Mono", 0, 12)); // NOI18N
+        tabelaPlano.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -123,9 +123,9 @@ public class JanelaCadastroPlano extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        tabelaImoveis.setFocusable(false);
-        tabelaImoveis.setGridColor(new java.awt.Color(102, 102, 102));
-        jScrollPane1.setViewportView(tabelaImoveis);
+        tabelaPlano.setFocusable(false);
+        tabelaPlano.setGridColor(new java.awt.Color(102, 102, 102));
+        jScrollPane1.setViewportView(tabelaPlano);
 
         btnConcluir.setBackground(new java.awt.Color(0, 204, 204));
         btnConcluir.setFont(new java.awt.Font("Noto Sans Mono", 0, 15)); // NOI18N
@@ -240,7 +240,7 @@ public class JanelaCadastroPlano extends javax.swing.JFrame {
                     .addComponent(jLabel7)
                     .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel9))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(campoRua, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -274,8 +274,8 @@ public class JanelaCadastroPlano extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(17, 17, 17))
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         pack();
@@ -329,21 +329,21 @@ public class JanelaCadastroPlano extends javax.swing.JFrame {
             this.limparCampo("cep");
         }
         if (linhas <= 13){
-            Imovel imovel = new Imovel(plano,planoString,rua, numero, cep, complemento);
+            Plano plano = new Plano(plano,planoString,rua, numero, cep, complemento);
             if (linhas > 0){
-                if (this.controller.verificarImovel(this.cliente.getImoveis(), imovel)){
+                if (this.controller.verificarPlano(this.cliente.getPlanos(), plano)){
                     this.exibeMensagemErro("Erro!! Este endereço já foi inserido.");
                     this.limpaCampos();
                 }else if (numero != -999 && cep != -999){
                     this.addLinha(planoString,rua, numero, complemento, cep, linhas);
-                    this.cliente.addImovel(new Imovel(plano,planoString,rua, numero, cep, complemento));
+                    this.cliente.addPlano(new Plano(plano,planoString,rua, numero, cep, complemento));
                     this.limpaCampos();
                     linhas++;
                 }
             }  
             if (linhas == 0 && numero != -999 && cep != -999){
                 this.addLinha(planoString,rua, numero, complemento, cep, linhas);
-                this.cliente.addImovel(new Imovel(plano,planoString,rua, numero, cep, complemento));
+                this.cliente.addPlano(new Plano(plano,planoString,rua, numero, cep, complemento));
                 this.limpaCampos();
                 linhas++;
             }
@@ -351,11 +351,11 @@ public class JanelaCadastroPlano extends javax.swing.JFrame {
     }
     private void addLinha(String planoString,String rua, int numero, String complemento,int cep, int linha){
         
-        this.tabelaImoveis.setValueAt(planoString, linha, 0);
-        this.tabelaImoveis.setValueAt(rua, linha, 1);
-        this.tabelaImoveis.setValueAt(numero, linha, 2);
-        this.tabelaImoveis.setValueAt(complemento, linha, 3);
-        this.tabelaImoveis.setValueAt(cep, linha, 4);
+        this.tabelaPlano.setValueAt(planoString, linha, 0);
+        this.tabelaPlano.setValueAt(rua, linha, 1);
+        this.tabelaPlano.setValueAt(numero, linha, 2);
+        this.tabelaPlano.setValueAt(complemento, linha, 3);
+        this.tabelaPlano.setValueAt(cep, linha, 4);
     }
     private void exibeMensagemErro(String mensagem){
         JOptionPane.showMessageDialog(this, mensagem, "Erro",JOptionPane.ERROR_MESSAGE);
@@ -375,8 +375,8 @@ public class JanelaCadastroPlano extends javax.swing.JFrame {
         this.campoNumero.setText("");
         this.campoPlano.setText("");
     }
-    private void mostrarImoveis(){
-        for (Imovel i : this.cliente.getImoveis()){
+    private void mostrarPlanos(){
+        for (Plano i : this.cliente.getPlanos()){
             this.addLinha(i.getPlanoString(),i.getRua(), i.getNumero(), i.getComplemento(), i.getCEP(), linhas);
             linhas++;
         }
@@ -410,6 +410,6 @@ public class JanelaCadastroPlano extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable tabelaImoveis;
+    private javax.swing.JTable tabelaPlano;
     // End of variables declaration//GEN-END:variables
 }

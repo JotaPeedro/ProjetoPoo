@@ -47,13 +47,13 @@ public class Controller {
     public int buscarUser(Login login){
         return this.model.buscaUser(login);
     }
-    public boolean verificarImovel(ArrayList<Imovel> imoveis, Imovel imovel){
+    public boolean verificarPlano(ArrayList<Plano> imoveis, Plano plano){
         boolean existe = false;
-        for (Imovel i : imoveis){
-            if (i.getRua().equals(imovel.getRua()) && 
-                    i.getCEP() == imovel.getCEP() &&
-                    i.getNumero() == imovel.getNumero() &&
-                    i.getComplemento().equals(imovel.getComplemento())){
+        for (Plano i : imoveis){
+            if (i.getRua().equals(plano.getRua()) && 
+                    i.getCEP() == plano.getCEP() &&
+                    i.getNumero() == plano.getNumero() &&
+                    i.getComplemento().equals(plano.getComplemento())){
                 existe = true;
             }
         }

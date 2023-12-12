@@ -14,7 +14,7 @@ public class TelaCadastroPlano extends javax.swing.JPanel {
         cliente = Cliente.iniciar();
         controller = Controller.iniciar();
         linha = 0;
-        this.mostrarImoveis();
+        this.mostrarPlanos();
     }
     
     @SuppressWarnings("unchecked")
@@ -33,7 +33,7 @@ public class TelaCadastroPlano extends javax.swing.JPanel {
         campoComplemento = new javax.swing.JTextField();
         btnCadastrar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tabelaImoveis = new javax.swing.JTable();
+        tabelaPlanos = new javax.swing.JTable();
         btnVoltar = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
@@ -87,9 +87,9 @@ public class TelaCadastroPlano extends javax.swing.JPanel {
             }
         });
 
-        tabelaImoveis.setBackground(new java.awt.Color(204, 204, 255));
-        tabelaImoveis.setFont(new java.awt.Font("Noto Sans Mono", 0, 12)); // NOI18N
-        tabelaImoveis.setModel(new javax.swing.table.DefaultTableModel(
+        tabelaPlanos.setBackground(new java.awt.Color(204, 204, 255));
+        tabelaPlanos.setFont(new java.awt.Font("Noto Sans Mono", 0, 12)); // NOI18N
+        tabelaPlanos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -118,7 +118,7 @@ public class TelaCadastroPlano extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(tabelaImoveis);
+        jScrollPane1.setViewportView(tabelaPlanos);
 
         btnVoltar.setBackground(new java.awt.Color(0, 204, 204));
         btnVoltar.setText("Voltar");
@@ -195,24 +195,19 @@ public class TelaCadastroPlano extends javax.swing.JPanel {
                                 .addGap(18, 18, 18)
                                 .addComponent(jLabel5)
                                 .addGap(18, 18, 18)
-                                .addComponent(campoComplemento, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(campoComplemento, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel10)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
+                        .addGap(29, 29, 29)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel10)
                             .addComponent(jLabel4)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel6)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(btnCadastrar)
-                                    .addComponent(campoPlano, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(320, 320, 320))))
+                                    .addComponent(campoPlano, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -253,7 +248,7 @@ public class TelaCadastroPlano extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed
-        this.cadastrarImovel();
+        this.cadastrarPlano();
     }//GEN-LAST:event_btnCadastrarActionPerformed
 
     private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
@@ -265,7 +260,7 @@ public class TelaCadastroPlano extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_campoPlanoActionPerformed
     
-    private void cadastrarImovel(){
+    private void cadastrarPlano(){
         int plano= controller.validaNumeros(this.campoPlano.getText().trim());
         int numero = controller.validaNumeros(this.campoNum.getText().trim());
         int cep = controller.validaNumeros(this.campoCep.getText().trim());
@@ -295,29 +290,29 @@ public class TelaCadastroPlano extends javax.swing.JPanel {
             this.limparCampo("cep");
         }
         if (linha <= 13){
-            Imovel imovel = new Imovel(plano,planoString,rua, numero, cep, complemento);
+            Plano plano = new Plano(plano,planoString,rua, numero, cep, complemento);
             if (linha > 0){
-                if (this.controller.verificarImovel(this.cliente.getImoveis(), imovel)){
+                if (this.controller.verificarPlano(this.cliente.getPlanos(), plano)){
                     this.exibeMensagemErro("Erro!! Este endereço já foi inserido.");
                     this.limpaCampos();
                 }else if (numero != -999 && cep != -999){
                     this.addLinha(planoString,rua, numero,  cep, complemento,linha);
-                    this.cliente.addImovel(imovel);
+                    this.cliente.addPlano(plano);
                     this.limpaCampos();
                     linha++;
                 }
             }  
             if (linha == 0 && numero != -999 && cep != -999){
                 this.addLinha(planoString,rua, numero,  cep,complemento, linha);
-                this.cliente.addImovel(new Imovel(plano,planoString,rua, numero, cep, complemento));
+                this.cliente.addPlano(new Plano(plano,planoString,rua, numero, cep, complemento));
                 this.limpaCampos();
                 linha++;
             }
         }
     }
     
-    private void mostrarImoveis(){
-        for (Imovel i : cliente.getImoveis()){
+    private void mostrarPlanos(){
+        for (Plano i : cliente.getPlanos()){
             int plano=i.getPlano();
             String planoString="";
         
@@ -332,22 +327,22 @@ public class TelaCadastroPlano extends javax.swing.JPanel {
             planoString="800MB";
         }
             
-            this.tabelaImoveis.setValueAt(planoString, linha, 0);
-            this.tabelaImoveis.setValueAt(i.getRua(), linha, 1);
-            this.tabelaImoveis.setValueAt(i.getNumero(), linha, 2);
-            this.tabelaImoveis.setValueAt(i.getComplemento(), linha, 3);
-            this.tabelaImoveis.setValueAt(i.getCEP(), linha, 4);
+            this.tabelaPlanos.setValueAt(planoString, linha, 0);
+            this.tabelaPlanos.setValueAt(i.getRua(), linha, 1);
+            this.tabelaPlanos.setValueAt(i.getNumero(), linha, 2);
+            this.tabelaPlanos.setValueAt(i.getComplemento(), linha, 3);
+            this.tabelaPlanos.setValueAt(i.getCEP(), linha, 4);
             linha++;
         }
     }
     
        private void addLinha(String planoString,String rua, int numero, int cep,String complemento, int linha){
         
-        this.tabelaImoveis.setValueAt(planoString, linha, 0);
-        this.tabelaImoveis.setValueAt(rua, linha, 1);
-        this.tabelaImoveis.setValueAt(numero, linha, 2);
-        this.tabelaImoveis.setValueAt(complemento, linha, 3);
-        this.tabelaImoveis.setValueAt(cep, linha, 4);
+        this.tabelaPlanos.setValueAt(planoString, linha, 0);
+        this.tabelaPlanos.setValueAt(rua, linha, 1);
+        this.tabelaPlanos.setValueAt(numero, linha, 2);
+        this.tabelaPlanos.setValueAt(complemento, linha, 3);
+        this.tabelaPlanos.setValueAt(cep, linha, 4);
     }
     private void exibeMensagemErro(String mensagem){
         JOptionPane.showMessageDialog(this, mensagem, "Erro",JOptionPane.ERROR_MESSAGE);
@@ -388,6 +383,6 @@ public class TelaCadastroPlano extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable tabelaImoveis;
+    private javax.swing.JTable tabelaPlanos;
     // End of variables declaration//GEN-END:variables
 }

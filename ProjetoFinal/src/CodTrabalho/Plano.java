@@ -1,6 +1,6 @@
 package CodTrabalho;
 
-public class Imovel {
+public class Plano {
 
     private String rua;
     private int numero;
@@ -8,7 +8,7 @@ public class Imovel {
     private String complemento;
     private int plano;
     private String planoString;
-    public Imovel() {
+    public Plano() {
         
         this.rua = "";
         this.numero = 0;
@@ -20,7 +20,7 @@ public class Imovel {
     
     
     
-    public Imovel(int plano,String PlanoString,String rua, int numero, int CEP, String complemento) {
+    public Plano(int plano,String PlanoString,String rua, int numero, int CEP, String complemento) {
         
         this.plano=plano;
         this.planoString=planoString;

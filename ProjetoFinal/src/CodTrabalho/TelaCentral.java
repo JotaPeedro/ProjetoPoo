@@ -18,7 +18,7 @@ public class TelaCentral extends javax.swing.JPanel {
 
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        btnImovel = new javax.swing.JButton();
+        btnPlano = new javax.swing.JButton();
         btnVisualizarInfos = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         btnProblema = new javax.swing.JButton();
@@ -40,12 +40,12 @@ public class TelaCentral extends javax.swing.JPanel {
             }
         });
 
-        btnImovel.setBackground(new java.awt.Color(0, 204, 204));
-        btnImovel.setFont(new java.awt.Font("Noto Sans Mono", 0, 15)); // NOI18N
-        btnImovel.setText("Cadastrar Plano");
-        btnImovel.addActionListener(new java.awt.event.ActionListener() {
+        btnPlano.setBackground(new java.awt.Color(0, 204, 204));
+        btnPlano.setFont(new java.awt.Font("Noto Sans Mono", 0, 15)); // NOI18N
+        btnPlano.setText("Cadastrar Plano");
+        btnPlano.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnImovelActionPerformed(evt);
+                btnPlanoActionPerformed(evt);
             }
         });
 
@@ -97,7 +97,7 @@ public class TelaCentral extends javax.swing.JPanel {
                 .addGap(70, 70, 70)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnImovel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnPlano, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -125,7 +125,7 @@ public class TelaCentral extends javax.swing.JPanel {
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnImovel, javax.swing.GroupLayout.DEFAULT_SIZE, 62, Short.MAX_VALUE)
+                    .addComponent(btnPlano, javax.swing.GroupLayout.DEFAULT_SIZE, 62, Short.MAX_VALUE)
                     .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -141,9 +141,9 @@ public class TelaCentral extends javax.swing.JPanel {
         cardLayout.show(this.getParent(), "telaInfos");
     }//GEN-LAST:event_btnVisualizarInfosActionPerformed
 
-    private void btnImovelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImovelActionPerformed
+    private void btnPlanoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlanoActionPerformed
         cardLayout.show(this.getParent(), "telaCadastroImovel");
-    }//GEN-LAST:event_btnImovelActionPerformed
+    }//GEN-LAST:event_btnPlanoActionPerformed
 
     private void btnProblemaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProblemaActionPerformed
         cardLayout.show(this.getParent(), "telaVazamento");
@@ -164,7 +164,7 @@ public class TelaCentral extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnImovel;
+    private javax.swing.JButton btnPlano;
     private javax.swing.JButton btnProblema;
     private javax.swing.JButton btnSair;
     private javax.swing.JButton btnVisualizarInfos;

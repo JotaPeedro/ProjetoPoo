@@ -6,7 +6,7 @@ public class Cliente extends Usuario {
     
     private static Cliente cliente;
     private String nome;
-    private ArrayList<Imovel> imoveis = new ArrayList<>();
+    private ArrayList<Plano> planos = new ArrayList<>();
     private Login login;
     private String email;
     private int telefoneResidencial;
@@ -57,11 +57,11 @@ public class Cliente extends Usuario {
     public void setEmail(String email){
         this.email = email;
     }
-    public void addImovel(Imovel imovel){
-        this.imoveis.add(imovel);
+    public void addPlano(Plano plano){
+        this.planos.add(plano);
     }
-    public ArrayList<Imovel> getImoveis(){
-        return this.imoveis;
+    public ArrayList<Plano> getPlanos(){
+        return this.planos;
     }
     public String getNome() {
         return nome;

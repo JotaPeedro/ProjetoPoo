@@ -73,7 +73,7 @@ public class JanelaCadastro extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         campoNumConta = new javax.swing.JTextField();
         campoCodBanco = new javax.swing.JTextField();
-        btnImovel = new javax.swing.JButton();
+        btnPlano = new javax.swing.JButton();
         btnConcluir = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         campoNome = new javax.swing.JTextField();
@@ -177,12 +177,12 @@ public class JanelaCadastro extends javax.swing.JFrame {
                 .addContainerGap(17, Short.MAX_VALUE))
         );
 
-        btnImovel.setBackground(new java.awt.Color(0, 204, 204));
-        btnImovel.setFont(new java.awt.Font("Noto Sans Mono", 0, 15)); // NOI18N
-        btnImovel.setText("Cadastrar Imóvel");
-        btnImovel.addActionListener(new java.awt.event.ActionListener() {
+        btnPlano.setBackground(new java.awt.Color(0, 204, 204));
+        btnPlano.setFont(new java.awt.Font("Noto Sans Mono", 0, 15)); // NOI18N
+        btnPlano.setText("Cadastrar Plano");
+        btnPlano.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnImovelActionPerformed(evt);
+                btnPlanoActionPerformed(evt);
             }
         });
 
@@ -226,7 +226,7 @@ public class JanelaCadastro extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(72, 72, 72)
-                .addComponent(btnImovel)
+                .addComponent(btnPlano)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnConcluir)
                 .addGap(101, 101, 101))
@@ -305,7 +305,7 @@ public class JanelaCadastro extends javax.swing.JFrame {
                 .addComponent(pnlDebito, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnImovel)
+                    .addComponent(btnPlano)
                     .addComponent(btnConcluir))
                 .addContainerGap(55, Short.MAX_VALUE))
         );
@@ -341,10 +341,10 @@ public class JanelaCadastro extends javax.swing.JFrame {
         
     }//GEN-LAST:event_campoNumContaActionPerformed
 
-    private void btnImovelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImovelActionPerformed
+    private void btnPlanoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlanoActionPerformed
         Cliente user = Cliente.iniciar();
-        this.btnImovel.addActionListener(new JanelaListener());
-    }//GEN-LAST:event_btnImovelActionPerformed
+        this.btnPlano.addActionListener(new JanelaListener());
+    }//GEN-LAST:event_btnPlanoActionPerformed
 
     private void btnConcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConcluirActionPerformed
         this.realizaCadastro();
@@ -482,7 +482,7 @@ public class JanelaCadastro extends javax.swing.JFrame {
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnConcluir;
-    private javax.swing.JButton btnImovel;
+    private javax.swing.JButton btnPlano;
     private javax.swing.JTextField campoCelular;
     private javax.swing.JTextField campoCodBanco;
     private javax.swing.JTextField campoEmail;
