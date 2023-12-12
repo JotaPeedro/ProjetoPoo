@@ -261,16 +261,16 @@ public class TelaPlanos extends javax.swing.JPanel {
         
         for (Plano i : cliente.getPlanos()){
             String planoString=" ";
-            int plano=i.getPlano();
-            if(plano==1){
+            int planoo=i.getPlanoo();
+            if(planoo==1){
                planoString="300MB";
            
             
-        }else if(plano==2){
+        }else if(planoo==2){
              planoString="500MB";
            
             
-        }else if(plano==3){
+        }else if(planoo==3){
             planoString="800MB";
            
         }

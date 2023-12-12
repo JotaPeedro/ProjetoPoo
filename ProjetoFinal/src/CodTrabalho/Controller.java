@@ -47,9 +47,9 @@ public class Controller {
     public int buscarUser(Login login){
         return this.model.buscaUser(login);
     }
-    public boolean verificarPlano(ArrayList<Plano> imoveis, Plano plano){
+    public boolean verificarPlano(ArrayList<Plano> planos, Plano plano){
         boolean existe = false;
-        for (Plano i : imoveis){
+        for (Plano i : planos){
             if (i.getRua().equals(plano.getRua()) && 
                     i.getCEP() == plano.getCEP() &&
                     i.getNumero() == plano.getNumero() &&

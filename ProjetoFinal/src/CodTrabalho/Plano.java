@@ -6,7 +6,7 @@ public class Plano {
     private int numero;
     private int CEP;
     private String complemento;
-    private int plano;
+    private int planoo;
     private String planoString;
     public Plano() {
         
@@ -20,9 +20,9 @@ public class Plano {
     
     
     
-    public Plano(int plano,String PlanoString,String rua, int numero, int CEP, String complemento) {
+    public Plano(int planoo,String PlanoString,String rua, int numero, int CEP, String complemento) {
         
-        this.plano=plano;
+        this.planoo=planoo;
         this.planoString=planoString;
         this.rua = rua;
         this.numero = numero;
@@ -48,12 +48,12 @@ public class Plano {
         return complemento;
     }
 
-    public int getPlano() {
-        return plano;
+    public int getPlanoo() {
+        return planoo;
     }
 
-    public void setPlano(int plano) {
-        this.plano = plano;
+    public void setPlanoo(int plano) {
+        this.planoo = planoo;
     }
 
     public String getPlanoString() {

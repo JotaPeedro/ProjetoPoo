@@ -261,21 +261,21 @@ public class TelaCadastroPlano extends javax.swing.JPanel {
     }//GEN-LAST:event_campoPlanoActionPerformed
     
     private void cadastrarPlano(){
-        int plano= controller.validaNumeros(this.campoPlano.getText().trim());
+        int planoo= controller.validaNumeros(this.campoPlano.getText().trim());
         int numero = controller.validaNumeros(this.campoNum.getText().trim());
         int cep = controller.validaNumeros(this.campoCep.getText().trim());
         String rua = this.campoRua.getText().trim();
         String complemento = this.campoComplemento.getText().trim();
           String planoString="";
         
-        if(plano==1){
+        if(planoo==1){
             
             planoString="300MB";
             
-        }else if(plano==2){
+        }else if(planoo==2){
             planoString="500MB";
             
-        }else if(plano==3){
+        }else if(planoo==3){
             planoString="800MB";
         }
         
@@ -290,7 +290,7 @@ public class TelaCadastroPlano extends javax.swing.JPanel {
             this.limparCampo("cep");
         }
         if (linha <= 13){
-            Plano plano = new Plano(plano,planoString,rua, numero, cep, complemento);
+            Plano plano = new Plano(planoo,planoString,rua, numero, cep, complemento);
             if (linha > 0){
                 if (this.controller.verificarPlano(this.cliente.getPlanos(), plano)){
                     this.exibeMensagemErro("Erro!! Este endereço já foi inserido.");
@@ -304,7 +304,7 @@ public class TelaCadastroPlano extends javax.swing.JPanel {
             }  
             if (linha == 0 && numero != -999 && cep != -999){
                 this.addLinha(planoString,rua, numero,  cep,complemento, linha);
-                this.cliente.addPlano(new Plano(plano,planoString,rua, numero, cep, complemento));
+                this.cliente.addPlano(new Plano(planoo,planoString,rua, numero, cep, complemento));
                 this.limpaCampos();
                 linha++;
             }
@@ -313,17 +313,17 @@ public class TelaCadastroPlano extends javax.swing.JPanel {
     
     private void mostrarPlanos(){
         for (Plano i : cliente.getPlanos()){
-            int plano=i.getPlano();
+            int planoo=i.getPlanoo();
             String planoString="";
         
-        if(plano==1){
+        if(planoo==1){
             
             planoString="300MB";
             
-        }else if(plano==2){
+        }else if(planoo==2){
             planoString="500MB";
             
-        }else if(plano==3){
+        }else if(planoo==3){
             planoString="800MB";
         }
             

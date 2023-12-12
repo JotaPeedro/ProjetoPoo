@@ -142,7 +142,7 @@ public class TelaCentral extends javax.swing.JPanel {
     }//GEN-LAST:event_btnVisualizarInfosActionPerformed
 
     private void btnPlanoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlanoActionPerformed
-        cardLayout.show(this.getParent(), "telaCadastroImovel");
+        cardLayout.show(this.getParent(), "telaCadastroPlano");
     }//GEN-LAST:event_btnPlanoActionPerformed
 
     private void btnProblemaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProblemaActionPerformed

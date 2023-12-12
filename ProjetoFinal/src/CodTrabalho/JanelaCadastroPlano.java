@@ -303,18 +303,18 @@ public class JanelaCadastroPlano extends javax.swing.JFrame {
         int cep = controller.validaNumeros(this.campoCEP.getText().trim());
         String rua = this.campoRua.getText().trim();
         String complemento = this.campoComplemento.getText().trim();
-        int plano=controller.validaNumeros(this.campoPlano.getText().trim());
+        int planoo=controller.validaNumeros(this.campoPlano.getText().trim());
         String planoString="";
         
         
-        if(plano==1){
+        if(planoo==1){
            
             planoString="300MB";
             
-        }else if(plano==2){
+        }else if(planoo==2){
             planoString="500MB";
             
-        }else if(plano==3){
+        }else if(planoo==3){
             planoString="800MB";
         }
         
@@ -329,21 +329,21 @@ public class JanelaCadastroPlano extends javax.swing.JFrame {
             this.limparCampo("cep");
         }
         if (linhas <= 13){
-            Plano plano = new Plano(plano,planoString,rua, numero, cep, complemento);
+            Plano plano = new Plano(planoo,planoString,rua, numero, cep, complemento);
             if (linhas > 0){
                 if (this.controller.verificarPlano(this.cliente.getPlanos(), plano)){
                     this.exibeMensagemErro("Erro!! Este endereço já foi inserido.");
                     this.limpaCampos();
                 }else if (numero != -999 && cep != -999){
                     this.addLinha(planoString,rua, numero, complemento, cep, linhas);
-                    this.cliente.addPlano(new Plano(plano,planoString,rua, numero, cep, complemento));
+                    this.cliente.addPlano(new Plano(planoo,planoString,rua, numero, cep, complemento));
                     this.limpaCampos();
                     linhas++;
                 }
             }  
             if (linhas == 0 && numero != -999 && cep != -999){
                 this.addLinha(planoString,rua, numero, complemento, cep, linhas);
-                this.cliente.addPlano(new Plano(plano,planoString,rua, numero, cep, complemento));
+                this.cliente.addPlano(new Plano(planoo,planoString,rua, numero, cep, complemento));
                 this.limpaCampos();
                 linhas++;
             }
