@@ -135,7 +135,7 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="cc" green="cc" red="0" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Perfil Cliente"/>
+        <Property name="text" type="java.lang.String" value="Planos Cliente"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">

@@ -2,18 +2,18 @@ package CodTrabalho;
 
 import java.awt.CardLayout;
 
-public class TelaPerfil extends javax.swing.JPanel {
+public class TelaPlanos extends javax.swing.JPanel {
     CardLayout cardLayout;
-    private static TelaPerfil telaInfos = null;
-    private TelaPerfil(CardLayout layout) {
+    private static TelaPlanos telaInfos = null;
+    private TelaPlanos(CardLayout layout) {
         initComponents();
         cardLayout = layout;
         this.mostrarInfos();
     }
     
-    public static TelaPerfil iniciar(CardLayout layout){
+    public static TelaPlanos iniciar(CardLayout layout){
         if (telaInfos == null){
-            telaInfos = new TelaPerfil(layout);
+            telaInfos = new TelaPlanos(layout);
         }
         return telaInfos;
     }
@@ -45,7 +45,7 @@ public class TelaPerfil extends javax.swing.JPanel {
 
         jLabel1.setFont(new java.awt.Font("Noto Sans Mono", 0, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 204, 204));
-        jLabel1.setText("Perfil Cliente");
+        jLabel1.setText("Planos Cliente");
 
         jLabel2.setFont(new java.awt.Font("Noto Sans Mono", 1, 15)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 204, 204));

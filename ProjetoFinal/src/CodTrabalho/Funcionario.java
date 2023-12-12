@@ -1,6 +1,6 @@
 package CodTrabalho;
 
-public class Funcionario implements IUsuario{
+public class Funcionario extends Usuario{
     
     private String nome;
     private Login login;

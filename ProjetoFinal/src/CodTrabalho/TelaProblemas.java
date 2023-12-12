@@ -124,7 +124,7 @@ public class TelaProblemas extends javax.swing.JPanel {
                 .addComponent(btnVisualizar)
                 .addGap(41, 41, 41))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(22, Short.MAX_VALUE)
+                .addContainerGap(37, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(btnAtualiza)
@@ -135,7 +135,7 @@ public class TelaProblemas extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(250, 250, 250)
                 .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -153,7 +153,7 @@ public class TelaProblemas extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnVoltar)
                     .addComponent(btnAtualiza))
-                .addContainerGap(11, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -166,7 +166,7 @@ public class TelaProblemas extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(this, "Solicitação não encontrada", "Notificação", JOptionPane.INFORMATION_MESSAGE);
                 indiceSolicitacao = -999;
             } else if (indiceSolicitacao >= 0){
-                //this.btnVisualizar.addActionListener(new JanelaListener(indiceSolicitacao));
+                
                 JanelaSolicitacao janelaSolicitacao = JanelaSolicitacao.iniciar(indiceSolicitacao);
                 janelaSolicitacao.addWindowListener(new WindowAdapter(){
                     @Override

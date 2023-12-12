@@ -47,7 +47,7 @@ public class JanelaLogin extends javax.swing.JFrame{
         jLabel1.setBackground(new java.awt.Color(0, 204, 204));
         jLabel1.setFont(new java.awt.Font("Noto Sans Mono", 0, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 204, 204));
-        jLabel1.setText("Bem-Vindo!!!");
+        jLabel1.setText("Central do Assinante");
 
         jLabel2.setBackground(new java.awt.Color(0, 204, 255));
         jLabel2.setFont(new java.awt.Font("Noto Sans Mono", 0, 18)); // NOI18N
@@ -85,10 +85,6 @@ public class JanelaLogin extends javax.swing.JFrame{
         painelLogin.setLayout(painelLoginLayout);
         painelLoginLayout.setHorizontalGroup(
             painelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelLoginLayout.createSequentialGroup()
-                .addContainerGap(186, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(166, 166, 166))
             .addGroup(painelLoginLayout.createSequentialGroup()
                 .addGap(161, 161, 161)
                 .addGroup(painelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -105,14 +101,18 @@ public class JanelaLogin extends javax.swing.JFrame{
                         .addGap(83, 83, 83)
                         .addComponent(btnEntrar)
                         .addGap(15, 15, 15)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(177, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, painelLoginLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(96, 96, 96))
         );
         painelLoginLayout.setVerticalGroup(
             painelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(painelLoginLayout.createSequentialGroup()
-                .addGap(89, 89, 89)
+                .addGap(76, 76, 76)
                 .addComponent(jLabel1)
-                .addGap(55, 55, 55)
+                .addGap(68, 68, 68)
                 .addGroup(painelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(campoID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -162,23 +162,25 @@ public class JanelaLogin extends javax.swing.JFrame{
         Cliente cliente = Cliente.iniciar();
   
         this.limparCampos();
-        if (this.controller.validaLogin(login)){
+      if (this.controller.validaLogin(login)) {
             int posiUser = this.controller.buscarUser(login);
-            IUsuario user = this.controller.getUsuario(posiUser);
-            
-            if (user.getTipo().equalsIgnoreCase("Funcionario")){
+            Usuario user = (Usuario) this.controller.getUsuario(posiUser);
+
+            if (user instanceof Funcionario) {
                 paginas.show(this.painelPrincipal, "telaServFuncionario");
-            } else if (user.getTipo().equalsIgnoreCase("Cliente")){
-                cliente = (Cliente) user;
-                Cliente.setCliente(cliente);
-                this.painelPrincipal.add(TelaPerfil.iniciar(paginas), "telaInfos");
+            } else if (user instanceof Cliente) {
+                Cliente client = (Cliente) user;
+                Cliente.setCliente(client);
+                this.painelPrincipal.add(TelaPlanos.iniciar(paginas), "telaInfos");
                 this.painelPrincipal.add(new TelaCadastroPlano(paginas), "telaCadastroImovel");
                 this.painelPrincipal.add(new TelaInfProblema(paginas), "telaVazamento");
                 paginas.show(this.painelPrincipal, "telaServicos");
-            }           
-        }else {
-            JOptionPane.showMessageDialog(this, "Usuário e/ou senha incorretos", "Login Incorreto", JOptionPane.ERROR_MESSAGE);
-        }      
+            }
+    } else {
+        JOptionPane.showMessageDialog(this, "Usuário e/ou senha incorretos", "Login Incorreto", JOptionPane.ERROR_MESSAGE);
+    }
+      
+      
     }//GEN-LAST:event_btnEntrarActionPerformed
      public void limparCampos(){
         this.campoID.setText("");

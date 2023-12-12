@@ -14,12 +14,12 @@ public class Controller {
     }
     
     private Controller(){
-        IUsuario funcionario = new Funcionario("Administrador");
-        Login loginFuncionario = new Login("admin", "admin");
+        Usuario funcionario = new Funcionario("Administrador");
+        Login loginFuncionario = new Login("funcionario", "funcionario123");
         funcionario.setLogin(loginFuncionario);
         this.model = new Model();
         this.model.addUsuario(funcionario);
-        //this.model.addSolicitacao(new Solicitacao("Solicitação teste", "filipe", 98632657));
+        
     }
     public int validaNumeros(String numero){
         int num;
@@ -40,7 +40,7 @@ public class Controller {
     public boolean verificaLogin(String idUser){
         return this.model.buscaId(idUser);
     }
-    public IUsuario getUsuario(int indice){
+    public Usuario getUsuario(int indice){
         return this.model.getUsuario(indice);
     }
     public int buscarUser(Login login){
@@ -58,7 +58,7 @@ public class Controller {
         }
         return existe;
     }
-    public void validaUpdateUser(int indice, IUsuario user){
+    public void validaUpdateUser(int indice, Usuario user){
         this.model.atualizarUsuario(indice, user);
     }
     public void criarSolicitacao(String descricao, String idCliente, int numSolicitacao){

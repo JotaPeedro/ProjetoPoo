@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Model {
     
-    private ArrayList<IUsuario> usuarios;
+    private ArrayList<Usuario> usuarios;
     private ArrayList<Solicitacao> solicitacoes;
     
     public Model(){
@@ -12,14 +12,14 @@ public class Model {
         this.solicitacoes=new ArrayList<>();
     }
     
-    public void addUsuario(IUsuario usuario){
+    public void addUsuario(Usuario usuario){
         this.usuarios.add(usuario);
     }
     public void addSolicitacao(Solicitacao solicitacao){
         this.solicitacoes.add(solicitacao);
     }
     
-    public ArrayList<IUsuario> getUsuarios() {
+    public ArrayList<Usuario> getUsuarios() {
         return usuarios;
     }
 
@@ -27,7 +27,7 @@ public class Model {
         return solicitacoes;
     }
     
-    public IUsuario getUsuario(int indice){
+    public Usuario getUsuario(int indice){
         return this.usuarios.get(indice);
     }
     
@@ -36,7 +36,7 @@ public class Model {
         boolean existesenha=false;
         boolean existe=false;
         
-        for (IUsuario i : this.getUsuarios()) {
+        for (Usuario i : this.getUsuarios()) {
             if (i.getLogin().getIdUser().equals(login.getIdUser())) {
                 existelogin=true;
             }
@@ -54,7 +54,7 @@ public class Model {
     public int buscaUser(Login login){
         int index = -999;
         int count = 0;
-        for (IUsuario i : this.getUsuarios()){
+        for (Usuario i : this.getUsuarios()){
             if (i.getLogin().getIdUser().equals(login.getIdUser()) &&
                     i.getLogin().getSenha().equals(login.getSenha())){
                 index = count;
@@ -66,7 +66,7 @@ public class Model {
     
     public boolean buscaId(String idUser){
         boolean existe = false;
-        for (IUsuario i : this.usuarios){
+        for (Usuario i : this.usuarios){
             if (i.getLogin().getIdUser().equals(idUser)){
                 existe = true;
             }
@@ -74,7 +74,7 @@ public class Model {
         return existe;
     }
     
-    public void atualizarUsuario(int indice, IUsuario user){
+    public void atualizarUsuario(int indice, Usuario user){
         this.usuarios.set(indice, user);
     }
     

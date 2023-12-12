@@ -31,7 +31,7 @@ public class TelaInfProblema extends javax.swing.JPanel {
         jLabel1.setBackground(new java.awt.Color(0, 204, 204));
         jLabel1.setFont(new java.awt.Font("Noto Sans Mono", 0, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 204, 204));
-        jLabel1.setText("Informar Problemas");
+        jLabel1.setText("Informar Problemas na Conexão");
 
         jLabel5.setBackground(new java.awt.Color(0, 204, 204));
         jLabel5.setFont(new java.awt.Font("Noto Sans Mono", 0, 15)); // NOI18N
@@ -77,16 +77,15 @@ public class TelaInfProblema extends javax.swing.JPanel {
                         .addComponent(jScrollPane1)
                         .addGap(34, 34, 34))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(161, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(143, 143, 143))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(BotaoVoltar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnRealizar)
-                        .addGap(18, 18, 18))))
+                .addContainerGap(406, Short.MAX_VALUE)
+                .addComponent(BotaoVoltar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnRealizar)
+                .addGap(18, 18, 18))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(72, 72, 72)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

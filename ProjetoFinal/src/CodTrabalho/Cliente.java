@@ -2,7 +2,7 @@ package CodTrabalho;
 
 import java.util.ArrayList;
 
-public class Cliente implements IUsuario {
+public class Cliente extends Usuario {
     
     private static Cliente cliente;
     private String nome;

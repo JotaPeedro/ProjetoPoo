@@ -110,7 +110,7 @@ public class TelaCentral extends javax.swing.JPanel {
                 .addComponent(jLabel1)
                 .addGap(124, 124, 124))
             .addGroup(layout.createSequentialGroup()
-                .addGap(254, 254, 254)
+                .addGap(280, 280, 280)
                 .addComponent(btnSair)
                 .addGap(280, 280, 280))
         );
