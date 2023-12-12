@@ -205,10 +205,12 @@ public class JanelaCadastro extends javax.swing.JFrame {
         lblExiste.setForeground(new java.awt.Color(0, 204, 204));
         lblExiste.setText("Já existe");
 
+        opEmail.setBackground(new java.awt.Color(51, 51, 51));
         opEmail.setFont(new java.awt.Font("Noto Sans Mono", 0, 12)); // NOI18N
         opEmail.setForeground(new java.awt.Color(0, 204, 204));
         opEmail.setText("Receber fatura por e-mail");
 
+        opDebito.setBackground(new java.awt.Color(51, 51, 51));
         opDebito.setFont(new java.awt.Font("Noto Sans Mono", 0, 12)); // NOI18N
         opDebito.setForeground(new java.awt.Color(0, 204, 204));
         opDebito.setText("Solicitar débito automatico");

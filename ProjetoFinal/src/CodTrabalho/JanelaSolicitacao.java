@@ -78,6 +78,7 @@ public class JanelaSolicitacao extends javax.swing.JFrame {
         jLabel4.setText("Descrição: ");
 
         txtDescricao.setEditable(false);
+        txtDescricao.setBackground(new java.awt.Color(204, 204, 255));
         txtDescricao.setColumns(20);
         txtDescricao.setFont(new java.awt.Font("Noto Sans Mono", 0, 14)); // NOI18N
         txtDescricao.setLineWrap(true);

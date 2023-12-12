@@ -3,8 +3,8 @@ package CodTrabalho;
 public class Main {
 
     public void iniciar() {
-        JanelaPrincipal janelaPrincipal = new JanelaPrincipal();
-        janelaPrincipal.setVisible(true);
+        JanelaLogin janelaLogin = new JanelaLogin();
+        janelaLogin.setVisible(true);
     }
 
     public Main() {

@@ -54,7 +54,7 @@ public class TelaProblemas extends javax.swing.JPanel {
         });
 
         tabelaSolicitacoes.setAutoCreateRowSorter(true);
-        tabelaSolicitacoes.setBackground(new java.awt.Color(102, 102, 102));
+        tabelaSolicitacoes.setBackground(new java.awt.Color(204, 204, 255));
         tabelaSolicitacoes.setFont(new java.awt.Font("Noto Sans Mono", 0, 12)); // NOI18N
         tabelaSolicitacoes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

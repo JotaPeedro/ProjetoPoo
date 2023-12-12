@@ -75,7 +75,7 @@ public class TelaPerfil extends javax.swing.JPanel {
         jLabel8.setForeground(new java.awt.Color(0, 204, 204));
         jLabel8.setText("Cód. Banco: ");
 
-        tabelaImoveis.setBackground(new java.awt.Color(102, 102, 102));
+        tabelaImoveis.setBackground(new java.awt.Color(204, 204, 255));
         tabelaImoveis.setFont(new java.awt.Font("Noto Sans Mono", 0, 12)); // NOI18N
         tabelaImoveis.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -117,21 +117,27 @@ public class TelaPerfil extends javax.swing.JPanel {
         });
 
         lblNome.setFont(new java.awt.Font("Noto Sans Mono", 0, 14)); // NOI18N
+        lblNome.setForeground(new java.awt.Color(255, 255, 255));
         lblNome.setText("jLabel9");
 
         lblEmail.setFont(new java.awt.Font("Noto Sans Mono", 0, 14)); // NOI18N
+        lblEmail.setForeground(new java.awt.Color(255, 255, 255));
         lblEmail.setText("jLabel10");
 
         lblTelC.setFont(new java.awt.Font("Noto Sans Mono", 0, 14)); // NOI18N
+        lblTelC.setForeground(new java.awt.Color(255, 255, 255));
         lblTelC.setText("jLabel11");
 
         lblTelR.setFont(new java.awt.Font("Noto Sans Mono", 0, 14)); // NOI18N
+        lblTelR.setForeground(new java.awt.Color(255, 255, 255));
         lblTelR.setText("jLabel12");
 
         lblNumConta.setFont(new java.awt.Font("Noto Sans Mono", 0, 14)); // NOI18N
+        lblNumConta.setForeground(new java.awt.Color(255, 255, 255));
         lblNumConta.setText("jLabel13");
 
         lblCodBanco.setFont(new java.awt.Font("Noto Sans Mono", 0, 14)); // NOI18N
+        lblCodBanco.setForeground(new java.awt.Color(255, 255, 255));
         lblCodBanco.setText("jLabel14");
 
         btnAtualiza.setBackground(new java.awt.Color(0, 204, 204));

@@ -87,7 +87,7 @@ public class TelaCadastroPlano extends javax.swing.JPanel {
             }
         });
 
-        tabelaImoveis.setBackground(new java.awt.Color(102, 102, 102));
+        tabelaImoveis.setBackground(new java.awt.Color(204, 204, 255));
         tabelaImoveis.setFont(new java.awt.Font("Noto Sans Mono", 0, 12)); // NOI18N
         tabelaImoveis.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

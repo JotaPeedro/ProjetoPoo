@@ -38,7 +38,7 @@ public class TelaInfProblema extends javax.swing.JPanel {
         jLabel5.setForeground(new java.awt.Color(0, 204, 204));
         jLabel5.setText("Descrição do Problema");
 
-        campoTexto.setBackground(new java.awt.Color(102, 102, 102));
+        campoTexto.setBackground(new java.awt.Color(204, 204, 255));
         campoTexto.setColumns(20);
         campoTexto.setFont(new java.awt.Font("Noto Sans Mono", 0, 14)); // NOI18N
         campoTexto.setLineWrap(true);
