@@ -122,6 +122,7 @@ public class TelaInfProblema extends javax.swing.JPanel {
             this.campoTexto.setText("");
             JOptionPane.showMessageDialog(this, "Solicitação enviada com suceesso", "Notificação", JOptionPane.OK_OPTION);
             this.layout.show(this.getParent(), "telaServicos");
+            
         }
     }
     

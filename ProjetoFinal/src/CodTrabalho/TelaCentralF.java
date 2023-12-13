@@ -25,6 +25,7 @@ public class TelaCentralF extends javax.swing.JPanel {
 
         jLabel1.setBackground(new java.awt.Color(0, 204, 204));
         jLabel1.setFont(new java.awt.Font("Noto Sans Mono", 0, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 204, 204));
         jLabel1.setText("Central do Funcionario");
 
         btnSolicitacoes.setBackground(new java.awt.Color(0, 204, 204));

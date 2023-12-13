@@ -86,9 +86,11 @@ public class JanelaSolicitacao extends javax.swing.JFrame {
         jScrollPane1.setViewportView(txtDescricao);
 
         lblCod.setFont(new java.awt.Font("Noto Sans Mono", 0, 14)); // NOI18N
+        lblCod.setForeground(new java.awt.Color(255, 255, 255));
         lblCod.setText("jLabel5");
 
         lblID.setFont(new java.awt.Font("Noto Sans Mono", 0, 14)); // NOI18N
+        lblID.setForeground(new java.awt.Color(255, 255, 255));
         lblID.setText("jLabel6");
 
         btnVoltar.setBackground(new java.awt.Color(0, 204, 204));
@@ -104,10 +106,6 @@ public class JanelaSolicitacao extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(80, 80, 80))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -124,6 +122,10 @@ public class JanelaSolicitacao extends javax.swing.JFrame {
                             .addGap(18, 18, 18)
                             .addComponent(lblCod, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap(20, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(113, 113, 113))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

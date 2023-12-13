@@ -22,6 +22,7 @@ public class Controller {
         
     }
     ///////SINGLETON//////////
+    /////////////Excecao Verificada///////////
     public int validaNumeros(String numero){
         int num;
         try{
@@ -32,6 +33,8 @@ public class Controller {
         }
         return num;
     }
+    
+    /////////Excecao verificada////////////
     public void validaCadastro(Cliente user){
         this.model.addUsuario(user);
     }

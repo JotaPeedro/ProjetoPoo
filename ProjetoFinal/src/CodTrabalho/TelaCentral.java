@@ -79,6 +79,11 @@ public class TelaCentral extends javax.swing.JPanel {
         jButton6.setBackground(new java.awt.Color(0, 204, 204));
         jButton6.setFont(new java.awt.Font("Noto Sans Mono", 0, 15)); // NOI18N
         jButton6.setText("Solicitar Atendimento");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         btnSair.setBackground(new java.awt.Color(0, 204, 204));
         btnSair.setFont(new java.awt.Font("Noto Mono", 0, 15)); // NOI18N
@@ -146,7 +151,7 @@ public class TelaCentral extends javax.swing.JPanel {
     }//GEN-LAST:event_btnPlanoActionPerformed
 
     private void btnProblemaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProblemaActionPerformed
-        cardLayout.show(this.getParent(), "telaVazamento");
+        cardLayout.show(this.getParent(), "telaProblemaConexao");
     }//GEN-LAST:event_btnProblemaActionPerformed
 
     private void btnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairActionPerformed
@@ -161,6 +166,10 @@ public class TelaCentral extends javax.swing.JPanel {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         JOptionPane.showMessageDialog(null, "Faturas enviadas Para o e-mail cadastrado");
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        JOptionPane.showMessageDialog(null, "Seu chamado foi encaminhado a central.Em breve um de nossos téncicos irá entrar em contato.");
+    }//GEN-LAST:event_jButton6ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
